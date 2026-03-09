@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://vy2f7eswicvv"]
+
+[ext_resource type="Texture2D" uid="uid://dcbfxc3gwy4mr" path="res://assets/background2/Dungeon Tile Set.png" id="1_ngoaj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ngoaj"]
+size = Vector2(89, 74.5)
+
+[node name="Trap but moving" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(5, -20.5521)
+scale = Vector2(1.875, 1.54297)
+texture = ExtResource("1_ngoaj")
+region_enabled = true
+region_rect = Rect2(15.9808, 79.9603, 48.0488, 48.0568)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(5.5, -20.25)
+shape = SubResource("RectangleShape2D_ngoaj")

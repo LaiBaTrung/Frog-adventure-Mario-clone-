@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2q5aq8t4udja"]
+
+[ext_resource type="Script" uid="uid://dev0fenpev2t3" path="res://scripts/end_menu.gd" id="1_66eor"]
+[ext_resource type="Texture2D" uid="uid://ctfebngrpdyw2" path="res://assets/backgroud/orig.png" id="2_5d8no"]
+[ext_resource type="Texture2D" uid="uid://dtipiv5v1cado" path="res://assets/end messegage.png" id="3_66eor"]
+
+[node name="Menu" type="Node"]
+script = ExtResource("1_66eor")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_5d8no")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -570.0
+offset_top = -151.0
+offset_right = 565.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_66eor")
+
+[node name="Start" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -170.0
+offset_top = 160.0
+offset_right = 87.0
+offset_bottom = 262.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Main Menu"
+
+[connection signal="pressed" from="Start" to="." method="_on_lvl_1_pressed"]
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
